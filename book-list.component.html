@@ -1,0 +1,64 @@
+<!-- <br>
+<div class='card'>
+  <div class='card-header'>
+    Book List
+  </div>
+  <div class='card-body'>
+      <div class='table-responsive'>
+        <table class='table'>
+            <thead>
+                <tr>
+                    <th> Images</th>
+                    <th>Books</th>
+                    <th>Author</th>
+                    <th>Description</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let book of books'>
+                    <td><img [src]='book.imageUrl'
+                        [title]='book.bookName'
+                        [style.width.px]='imageWidth'
+                        [style.margin.px]='imageMargin'>
+                    </td>
+                    <td>{{ book.bookName }}</td>
+                    <td>{{ book.bookAuthor }}</td>
+                    <td>{{ book.description }}</td>
+                    <td>{{ book.Rating }}</td>
+                </tr>
+
+            </tbody>
+        </table>
+      </div>
+
+  </div>  
+
+</div> -->
+
+<br><br>
+<!--/stories-->
+<hr>
+<div class="row" *ngFor='let book of books'>    
+    <br> 
+    <div class="col-md-2 col-sm-3 text-center">
+      <a class="story-title" href="#"><img [src]='book.imageUrl' style="width:100px;height:100px" class="img-circle"></a>
+    </div>
+    <div class="col-md-10 col-sm-9">
+      <h3>{{book.bookName}}</h3>
+      <div class="row">
+        <div class="col-xs-9">
+          <h4><span class="label label-default">{{ book.bookAuthor }}</span></h4><h4>
+          <small style="font-family:courier,'new courier';" class="text-muted">{{ book.description }} <a href="#" class="text-muted"></a></small>
+          </h4><h4>
+            <small style="font-family:courier,'new courier';" class="text-muted">Rating:{{ book.Rating }} <a href="#" class="text-muted"></a></small>
+            </h4></div>
+        <div class="col-xs-3"></div>
+      </div>
+      <br><br>
+    </div>
+  </div>
+  <hr>
+  
+  
+  <!--/stories-->
