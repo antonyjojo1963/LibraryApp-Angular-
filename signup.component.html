@@ -1,20 +1,27 @@
 <br><br><form class="container">
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" name="name">
+      <input type="email" class="form-control" name="email" [(ngModel)]=user.username pattern="^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+)\.([a-z]{2,3})(.[a-z]{2,3})?$" required>
       
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" name="password">
+      <input type="password" class="form-control" name="password" [(ngModel)]=user.password minlength="8" required >
     </div>
     <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
-        <input type="password" class="form-control" name="password">
+        <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" name="password" >
+      if(exampleInputPassword1.value == exampleInputPassword2"){
+      return true;
+      }
+      else{
+      alert("Password do not match");
+      return false;
+      }
       </div>
      <div class="mb-3">
         <label for="exampleInputNumber" class="form-label">Contact Number</label>
-        <input type="text" class="form-control" name="Number">
+        <input type="text" class="form-control" name="Number" minlength="10" maxlength="10" required>
       </div>
     <button type="submit" class="btn btn-primary">Sign Up</button>
   </form>
